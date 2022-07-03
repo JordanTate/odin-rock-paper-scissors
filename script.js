@@ -75,13 +75,6 @@ function playRound(option){
     previousSelection = document.querySelectorAll(`.${computerSelection}`);
 
     function addPrevious(){
-        if (computerSelection !== playerSelection){
-            previousSelection[0].classList.add('game__previous');
-            setTimeout(removePrevious, 200);
-
-        } else {
-            previousSelection[0].classList
-        }
         previousSelection[0].classList.add('game__previous');
         setTimeout(removePrevious, 200)
     }
