@@ -1,0 +1,119 @@
+/* Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Raleway&family=Roboto&display=swap');
+    /* font-family: 'Raleway', sans-serif; */
+    /* font-family: 'Roboto', sans-serif; */
+
+/* Reset */
+html{
+    box-sizing: border-box;
+    scroll-behavior: smooth;    
+}
+*, *::before, *::after{
+    box-sizing: inherit;
+    padding: 0;
+    margin: 0;
+    color: #252525;
+    text-align: center;
+}
+h1, h2, h3, h4, h5, h6{
+    font-family: 'Raleway', sans-serif;
+}
+p{
+    font-family: 'Roboto', sans-serif;
+    font-size: 24px;
+}
+.btn{
+    cursor: pointer;
+    background: none;
+    border: none;
+}
+
+/* Colour Palette */
+:root{
+    --background-light: #fffaff;
+}
+
+/* Main */
+body{
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow-x: hidden;
+    background-color: var(--background-light);
+}
+.title, .score{
+    margin-bottom: 1rem;
+}
+.sub-title, .game__player-choices{
+    margin-bottom: 2rem;
+}
+.game, .game__player-choices{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 800px;
+}
+.game{
+    position: relative;
+    flex-direction: column;
+    margin: 0 auto;
+}
+.player-choice__img{
+    max-width: 200px;
+    filter: drop-shadow(0 0 0 #ff10f0);
+    transition: cubic-bezier(0.4, 0.08, 0.3, 1.5) .5s;
+}
+.player-choice__img:hover{
+    filter: drop-shadow(0 0 20px #ff10f0);
+    transform: scale(1.1);
+    
+}
+.game__previous{
+    transform: scale(0.85);
+    filter: drop-shadow(0 0 20px #10d3ff);
+    transition: cubic-bezier(0.4, 0.08, 0.3, 1.5);
+}
+
+/* Game Over */
+.game__game-results{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100vw;
+    min-height: 100%;
+    opacity: 0;
+    pointer-events: none;
+    background-color: #25252580;
+    backdrop-filter: blur(10px);
+}
+.game__finished{
+    pointer-events: auto;
+    opacity: 1;
+    transition: cubic-bezier(0.75, 0, 0.175, 1) .25s;
+}
+.reset-btn{
+    width: 200px;
+    height: 48px;
+    color: #fff;
+    letter-spacing: 2px;
+    background: linear-gradient(45deg, transparent 5%, #ff013c 5%);
+    box-shadow: 6px 0 0 #00e6f6;
+}
+.reset-btn:hover{
+    background: linear-gradient(45deg, transparent 5%, #f00038 5%);
+    transform: scale(0.98);
+}
+
+/* Mobile */
+@media screen and (max-width: 600px){
+    .game, .game__player-choices, .player-choice__img{
+        width: 100%;
+    }
+}

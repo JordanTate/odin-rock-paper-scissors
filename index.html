@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock Paper Scissors | The Odin Project</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1 class="title">Rock Paper Scissors</h1>
+        <h2 class="sub-title">Choose your Weapon</h2>
+    </header>
+
+    <main class="game">
+        <div class="game__player-choices">
+            <button id="rock" class="btn" value="Rock" onclick="playRound(this)">
+                <img src="assets/Rock.png" alt="Rock" class="player-choice__img Rock">
+            </button>
+            <button id="paper" class="btn" value="Paper" onclick="playRound(this)">
+                <img src="assets/Paper.png" alt="Paper" class="player-choice__img Paper">
+            </button>
+            <button id="scissors" class="btn" value="Scissors" onclick="playRound(this)">
+                <img src="assets/Scissors.png" alt="Scissors" class="player-choice__img Scissors">
+            </button>
+        </div>
+
+        <div class="game__game-info">
+            <!-- Javascript -->
+        </div>
+    </main>
+
+    <div class="game__game-results">
+        <button type="button" id="reset" class="btn reset-btn">New Game?</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
